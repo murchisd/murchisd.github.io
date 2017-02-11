@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <h2 class="page-heading">W3lc0me!</h1>
+  
+  {{ content }}
+
+</div>
