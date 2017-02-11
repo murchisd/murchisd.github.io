@@ -10,27 +10,13 @@ navigation_weight: 6
 <html>
 <div class="container">
 	<br>
-<?php
 
-if(isset($_POST['g-recaptcha-response'])){
-	$captcha=$_POST['g-recaptcha-response']
-}
-?>
-{% if captcha%}
 {% highlight bash %}
 EHLO
 RCPT TO: <donaldmurchison@csus.edu>
 {% endhighlight %}
-{% endif %}
 <br>
 <p>Currently, the best way to reach me is at my CSUS email address.</p>
-
-    <form action="contact.php" method="POST">
-      <div id="html_element"></div>
-      <br>
-      <input type="submit" value="Email">
-		<div class="g-recaptcha" data-sitekey="6LcnOBUUAAAAAFirWKoqdC3oKncJDF5XT_tDuSDK"></div>
-		</form>
 
 </div>
 </html>
