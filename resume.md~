@@ -16,5 +16,5 @@ sudo apt-get update
 <br>
 <p>This page is still being updated</p>
 <br>
-<p>A pdf copy of my resume can be downloaded <a href="{{site.url}}/assets/Murhcison_Donald_Resume.pdf">here</a></p>
+<p>A pdf copy of my resume can be downloaded <a href="{{site.url}}/assets/Murchison_Donald_Resume.pdf">here</a></p>
 </div>
