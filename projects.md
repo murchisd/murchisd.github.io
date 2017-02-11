@@ -14,6 +14,5 @@ navigation_weight: 3
 sudo apt-get update
 {% endhighlight %}
 <br>
-<p>This page is still being updated</p>
-<br>
+<p>On this page, I will post descriptions of projects I've completed. I will include a guide to complete the project on your own and a link to the github repository, if applicable.</p>
 </div>

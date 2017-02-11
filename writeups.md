@@ -14,8 +14,8 @@ navigation_weight: 4
 sudo apt-get update
 {% endhighlight %}
 <br>
-<p>This page is still being updated</p>
+<p>Here, I will be posting writeups of CTF challenges, or hacking exercises I have completed. </p>
 <br>
-A copy of my 2016 SANS Holiday Hack Challenge writeup can be found <a href="{{site.url}}/assets/Murchison_Donald_Holiday_Hack_Report.pdf">here</a>
+<p>A copy of my 2016 SANS Holiday Hack Challenge writeup can be found <a href="{{site.url}}/assets/Murchison_Donald_Holiday_Hack_Report.pdf">here</a></p>
 </div>
 

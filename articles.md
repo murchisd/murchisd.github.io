@@ -13,7 +13,7 @@ navigation_weight: 2
 {% highlight bash %}
 sudo apt-get update
 {% endhighlight %}
+
 <br>
-<p>This page is still being updated</p>
-<br>
+<p>This page will be a reference to articles I read and enjoyed along with a quick summary. For now, this will also host my own reference notes.</p>
 </div>

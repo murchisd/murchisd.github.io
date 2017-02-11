@@ -14,7 +14,7 @@ navigation_weight: 5
 sudo apt-get update
 {% endhighlight %}
 <br>
-<p>This page is still being updated</p>
+<p>This page will have a full resume, with extra detail about projects, interests, certificates, and awards.</p>
 <br>
 <p>A pdf copy of my resume can be downloaded <a href="{{site.url}}/assets/Murchison_Donald_Resume.pdf">here</a></p>
 </div>
