@@ -16,6 +16,12 @@
   {% endif %}
 	{% if page.title == 'Contact'%}
 	<script src='https://www.google.com/recaptcha/api.js'></script>
-	
+	<script type="text/javascript">
+      var onloadCallback = function() {
+        grecaptcha.render('html_element', {
+          'sitekey' : '6LcnOBUUAAAAAFirWKoqdC3oKncJDF5XT_tDuSDK'
+        });
+      };
+    </script>
 	{% endif %}
 </head>
