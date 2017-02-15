@@ -14,7 +14,7 @@ This was part 2 of another Web challenge, zumbo1. A teammate, Lukhvir Athwal, ha
 
 ![server code]({{ site.url }}/assets/bsides/ServerCodePt2.jpg)
 
-From this code, I saw that flag 2 was in a local file and the script was using the flask library. A quick google search for "flask vulnerabilites" showed me that this page may be susceptible to Server Side Template Injection. This was a new technique for me but I found two very helpful articles.
+From this code, I saw that flag 2 was in a local file and the script was using the flask library. A quick google search for "flask vulnerabilites" showed me that this page may be susceptible to Server Side Template Injection. This was a new technique for me but I found two very helpful articles.<br>
 -	[https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2/](https://nvisium.com/blog/2016/03/09/exploring-ssti-in-flask-jinja2/)
 - [https://nvisium.com/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii/](https://nvisium.com/blog/2016/03/11/exploring-ssti-in-flask-jinja2-part-ii/)
 
