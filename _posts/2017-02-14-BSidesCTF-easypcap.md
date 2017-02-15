@@ -6,7 +6,7 @@ title: "BSidesCTF easycap challenge"
 ---
 
 
-> "Can you get the flag from the packet capture?"<br>
+> Can you get the flag from the packet capture?<br>
 [easycap.pcap](https://scoreboard.ctf.bsidessf.com/attachment/5e1cb4ad2dd6aef750654f5377d9e67ed2732b97fe64d56e0603242c4b87d921)
 
 
