@@ -16,3 +16,7 @@ Looking at the php script, we see that the only authentication for the admin acc
 After sending the modified request, the flag was revealed.
 
 ![adminpanel screenshot]({{ site.url }}/assets/bsides/easyauthadmin.png)
+
+{% highlight bash%}
+FLAG:0076ecde2daae415d7e5ccc7db909e7e
+{%endhighlight%}
