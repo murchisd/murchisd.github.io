@@ -12,6 +12,6 @@ navigation_weight: 4
 
 <p>Here, I will be posting writeups of CTF challenges, or hacking exercises I have completed. <br>**Unitl there is an official CSUS/n00bs page, this page will also serve as a place for team members to publish their own writeups. </p>
 <br>
-<p>A copy of my 2016 SANS Holiday Hack Challenge writeup can be found <a href="{{site.url}}/assets/Murchison_Donald_Holiday_Hack_Report.pdf">here</a></p>
+
 </div>
 
