@@ -65,6 +65,8 @@ print binascii.unhexlify(hexi)
 
 {% endhighlight %}
 
+![rsa flag]({{ site.url }}/assets/alex/easyrsa.JPG)
+
 {% highlight bash %}
 ALEXCTF{RS4_I5_E55ENTIAL_T0_D0_BY_H4ND}
 {% endhighlight %}

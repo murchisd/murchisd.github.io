@@ -68,8 +68,8 @@ print binascii.unhexlify(hexi)
 {% highlight bash %}
 ALEXCTF{RS4_I5_E55ENTIAL_T0_D0_BY_H4ND}
 {% endhighlight %}
-
-** CR4:Poor RSA was a similar challenge except you had to first factor n to find p and q. I was using a program called msieve to try to find a factor but was not succesful. <br><br>
+<br>
+** CR4: Poor RSA was a similar challenge except you had to first factor n to find p and q. I was using a program called msieve to try to find a factor but was not succesful. <br><br>
 After reading writeups, I found a website which can be used to find known factors.
 
 [http://www.factordb.com/index.php?query=](http://www.factordb.com/index.php?query=)<br>
