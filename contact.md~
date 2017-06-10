@@ -13,7 +13,7 @@ navigation_weight: 6
 
 {% highlight bash %}
 EHLO
-RCPT TO: <donaldmurchison[at]csus[dot]edu>
+RCPT TO: <donaldmurchison@csus.edu>
 {% endhighlight %}
 <br>
 <p>Currently, the best way to reach me is at my CSUS email address.</p>

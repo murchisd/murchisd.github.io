@@ -19,7 +19,7 @@ c=0x7fe1a4f743675d1987d25d38111fae0f78bbea6852cba5beda47db76d119a3efe24cb04b9449
 He is underestimating our crypto skills!
 <br>
 
-Being familiar with cryptography and the math used in RSA helped a lot with this challenge. I saw that we were given p, q, e, and the ciphertext so now I just needed to find d use it to decrypt the cipher. Since it helps to understand how RSA works I have provided a very brief description below.
+It was helpful to already be familiar with cryptography and the math used in RSA for this challenge. I saw that we were given "p", "q", "e", and the ciphertext so now I just needed to find "d" and use it to decrypt the cipher. Since it helps to understand how RSA works I have provided a very brief description below.
 
 Basic overview of RSA:<br>
 1) Pick two large primes p and q<br>
