@@ -10,7 +10,7 @@ layout: default
 
   <ul class="post-list">
     {% for post in site.posts %}
-			{% if post.category == page.pagetitle %}
+			{% if post.category == "writeup" %}
       <li>
 
         <h2>

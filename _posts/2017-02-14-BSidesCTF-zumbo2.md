@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Donald Murchison
-category: writeup
+category: wr1t3Ups
 title: "BSidesCTF zumbo2 challenge"
 ---
 
