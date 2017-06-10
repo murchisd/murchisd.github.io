@@ -8,13 +8,9 @@ pagetitle: re5Um3
 navigation_weight: 5
 ---
 
-<div class="container">
-	<br>
+
 {% highlight bash %}
 sudo apt-get update
 {% endhighlight %}
-<br>
-<p>This page will have a full resume, with extra detail about projects, interests, certificates, and awards.</p>
-<br>
-<p>A pdf copy of my resume can be downloaded <a href="{{site.url}}/assets/Murchison_Donald_Resume.pdf">here</a></p>
-</div>
+><br>This page will have a full resume, with extra detail about projects, interests, certificates, and awards.<br>
+<br>A pdf copy of my resume can be downloaded [here]({{site.url}}/assets/Murchison_Donald_Resume.pdf)<br><br>

@@ -8,10 +8,7 @@ pagetitle: wr1t3Ups
 navigation_weight: 4
 ---
 
-<div class="container">
+><br>Here, I will be posting writeups of CTF challenges, or hacking exercises I have completed. <br><br>**Unitl there is an official CSUS/n00bs page, this page will also serve as a place for team members to publish their own writeups. </p>
+<br><br>
 
-<p>Here, I will be posting writeups of CTF challenges, or hacking exercises I have completed. <br><br>**Unitl there is an official CSUS/n00bs page, this page will also serve as a place for team members to publish their own writeups. </p>
-<br>
-
-</div>
 

@@ -8,12 +8,11 @@ pagetitle: art1cLe5
 navigation_weight: 2
 ---
 
-<div class="container">
-	<br>
+
 {% highlight bash %}
 sudo apt-get update
 {% endhighlight %}
 
-<br>
-<p>This page will be a reference to articles I read and enjoyed along with a quick summary. For now, this will also host my own reference notes.</p>
-</div>
+><br>This page will be a reference to articles I read and enjoyed along with a quick summary. For now, this will also host my own reference notes.
+<br><br>
+

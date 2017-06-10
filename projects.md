@@ -8,11 +8,13 @@ pagetitle: pr0j3cts
 navigation_weight: 3
 ---
 
-<div class="container">
-	<br>
-{% highlight bash %}
-sudo apt-get update
-{% endhighlight %}
-<br>
-<p>On this page, I will post descriptions of projects I've completed. I will include a guide to complete the project on your own and a link to the github repository, if applicable.</p>
-</div>
+
+><br>This page contains posts about projects I am working on or have completed. The posts contain a description of the project, links to source code, and a little bit about my thought process during the project.<br>
+ <br>
+Personally, I learn more from articles that describe why the author did things a certain way, or that explain ideas the author had which did not work.
+<br><br>
+I will try to write my posts in this manner, to better help others learn.<br><br>
+
+
+
+
