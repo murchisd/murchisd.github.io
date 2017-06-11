@@ -10,7 +10,7 @@ navigation_weight: 5
 
 
 {% highlight bash %}
-sudo apt-get update
+donald@comp:~$ sudo apt-get update
 {% endhighlight %}
 ><br>This page will have a full resume, with extra detail about projects, interests, certificates, and awards.<br>
 <br>A pdf copy of my resume can be downloaded [here]({{site.url}}/assets/Murchison_Donald_Resume.pdf)<br><br>

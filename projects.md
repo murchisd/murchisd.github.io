@@ -9,11 +9,12 @@ navigation_weight: 3
 ---
 
 
-><br>This page contains posts about projects I am working on or have completed. The posts contain a description of the project, links to source code, and a little bit about my thought process during the project.<br>
- <br>
-Personally, I learn more from articles that describe why the author did things a certain way, or that explain ideas the author had which did not work.
+><br>This page contains posts about projects I am working on or have completed. These projects range from simple python scripts to building a home lab from scratch.<br> 
+<br>
+The posts contain a description of the project, links to source code, and a little bit about my thought process during the project.<br><br>
+Personally, I learn more from articles that describe why the author did things a certain way, or why an idea did not work, so I will try to write in this manner.
 <br><br>
-I will try to write my posts in this manner, to better help others learn.<br><br>
+
 
 
 

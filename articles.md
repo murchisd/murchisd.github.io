@@ -10,7 +10,7 @@ navigation_weight: 2
 
 
 {% highlight bash %}
-sudo apt-get update
+donald@comp:~$ sudo apt-get update
 {% endhighlight %}
 
 ><br>This page will be a reference to articles I read and enjoyed along with a quick summary. For now, this will also host my own reference notes.

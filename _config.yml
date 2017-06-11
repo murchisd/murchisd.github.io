@@ -20,10 +20,7 @@ email: donaldmurchison@csus.edu
 school: California State University, Sacramento
 aboutme: Computer Science Student and Cybersecurity Enthusiast
 description: > # this means to ignore newlines until "baseurl:"
-  This site is meant to serve as a reference for me and other cybersecurity students.
-  It is currently under construction but will hopefully evolve into an excellent learning
-  site. I will be including projects, write ups, and anything else I feel might be helpful
-  to students entering the field of cybersecurity.
+  This site is meant to serve as learning reference for me and other cybersecurity students, as well as, highlight some of my accomplishments for potential employers. It is currently under construction but will hopefully evolve into an excellent source of information. I will be including projects, write ups, and other things which might be helpful to students entering the field of cybersecurity.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://murchisd.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: donaldmurchison
