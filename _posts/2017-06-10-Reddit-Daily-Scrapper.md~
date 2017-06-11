@@ -66,4 +66,15 @@ for sub in subreddits:
 
 {% endhighlight %}
 
-Now I just needed a way to email myself this information. I was originally going to return the body string to a powershell script, which would use my windows credentials and outlook to send the email. I liked this approach because I would not need to store my credentials or a secret in a config file. Currently, I do not have a windows machine running so I decided to use the Gmail API for now. 
+Now I just needed a way to email myself this information. I was originally going to return the "body" string to a powershell script, which would use my windows credentials and outlook to send the email. I liked this approach because I would not need to store my credentials or a secret in a config file. 
+
+Currently, I do not have a windows machine running so I decided to use the Gmail API for now.
+
+**To-Do get copy of my script from work machine
+
+** Finish write up
+
+
+
+
+ 

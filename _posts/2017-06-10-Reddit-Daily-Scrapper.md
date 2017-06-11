@@ -7,7 +7,7 @@ title: "Daily Reddit Scrapper"
 
 ![reddit logo]({{ site.url }}/assets/reddit/reddit_logo.png)
 
-Reddit has become one of my favorite sources of cyber security articles. Several subreddits have excellent write ups and articles for those interested in security, no matter what skill level. 
+Reddit has become one of my favorite sources of cybersecurity articles. Several subreddits have excellent write ups and articles for those interested in security, no matter what skill level. 
 
 I also subscribe to daily emails from a few cyber security firms. One day, I realized it would be nice to receive a summary of new reddit posts from my favorite subreddits in this fashion. So, I decided to spin up a python script to do this.  
 
