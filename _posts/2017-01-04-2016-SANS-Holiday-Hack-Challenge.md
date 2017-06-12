@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Donald Murchison
-category: wr1t3Ups
+category: wr1t3-Ups
 title: "2016 SANS Holiday Hack Challenge"
 ---
 

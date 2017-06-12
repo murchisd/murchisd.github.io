@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Lukhvir Athwal
-category: wr1t3Ups
+category: wr1t3-Ups
 title: "BSidesCTF easycap challenge"
 ---
 

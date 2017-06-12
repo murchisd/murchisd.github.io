@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Kameryn Taylor
-category: wr1t3Ups
+category: wr1t3-Ups
 title: "BSidesCTF easyauth challenge"
 ---
 

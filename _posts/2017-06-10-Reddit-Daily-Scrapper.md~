@@ -7,11 +7,13 @@ title: "Daily Reddit Scrapper"
 
 ![reddit logo]({{ site.url }}/assets/reddit/reddit_logo.png)
 
-Reddit has become one of my favorite sources of cyber security articles. Several subreddits have excellent write ups and articles for those interested in security, no matter what skill level. 
+Reddit has become one of my favorite sources of cybersecurity articles. Several subreddits have excellent write-ups and articles for those interested in security, no matter what skill level. 
 
-I also subscribe to daily emails from a few cyber security firms. One day, I realized it would be nice to receive a summary of new reddit posts from my favorite subreddits in this fashion. So, I decided to spin up a python script to do this.  
+I also subscribe to daily emails from a few cyber security firms. One day, I realized it would be nice to receive a list of new posts from my favorite subreddits. So, I decided to spin up a python script retrieve a list of new posts and email it to myself.  
 
-First, I needed to read about using the Reddit API. I've worked with a few APIs before and the first step is almost always authenticating, often with a client secret and id. With a quick google search, I found a great article which describes how to register your application with reddit, obtain a client secret and id, and even how to use the PRAW python library to read posts.
+First, I needed to read about using the Reddit API. I've worked with a few APIs before and the first step is almost always authenticating, often with a client secret and id. 
+
+With a quick google search, I found a great article which describes how to register your application with reddit, obtain a client secret and id, and even how to use the PRAW python library to read posts.
 
 [Build a Reddit Bot Part 1](http://pythonforengineers.com/build-a-reddit-bot-part-1/)
 
@@ -21,7 +23,7 @@ The Python Reddit API Wrapper (PRAW) documentation is [here](https://praw.readth
 
 
 
-My application is very simple and just read from subreddits so I did not need to include my username and password to authenticate. I created a praw.ini file in same directory as my script and saved the fields client_id, client_secret, and useragent(PyScrape Bot 0.1).
+My application is very simple and only reads from subreddits so I did not need to include my username and password to authenticate. I created a praw.ini file in same directory as my script and saved the fields client_id, client_secret, and useragent(PyScrape Bot 0.1).
 
 {% highlight python %}
 [pybot]

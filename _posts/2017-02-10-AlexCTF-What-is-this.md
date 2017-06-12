@@ -1,7 +1,7 @@
 ---
 layout: post
 author: Donald Murchison
-category: wr1t3Ups
+category: wr1t3-Ups
 title: "AlexCTF CR3: What is this encryption?"
 ---
 

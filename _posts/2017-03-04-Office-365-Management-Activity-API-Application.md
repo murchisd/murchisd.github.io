@@ -7,9 +7,11 @@ title: "Office 365 Management Activity API Application"
 
 ![office 365 logo]({{ site.url }}/assets/office/office-365-cloud.png)
 
-During my time working at Sacramento State, many of the University's enterprise-class applications were moved from on-premises servers to the "cloud". While this might have reduced costs, and reduced problems associated with maintenance and deployment, it made things more difficult in the Information Security Office. The most notable issue was the loss of Exchange logs.
+During my time working at Sacramento State, many of the University's enterprise-class applications were moved from on-premises servers to the "cloud". While this might have reduced costs, and reduced problems associated with maintenance and deployment, it made things more difficult in the Information Security Office. 
 
-A lot of my responsibilites as a SOC analyst, required monitoring logs and looking for anomalies, to detect compromised accounts. The Exchange logs allowed us to geolocate IPs and compare fields, like useragent strings, to determine if there was anomalous access for an account. Unfortunately, once the University moved to Exchange Online, we lost all of our logging capabilites for this service. 
+The most notable issue was the loss of Exchange logs.
+
+A lot of my responsibilites as a SOC analyst, required monitoring logs and looking for anomalies, to detect compromised accounts. The Exchange logs allowed us to geolocate IPs and compare fields, like useragent strings, to determine if there was anomalous access for an account. 
 
 Microsoft informed my supervisor that, for a fee, they would provied logging capabilites, or, for free, we could use the management activity api. Free is always better so we decided to develop a C# application to interact with the API. 
 
