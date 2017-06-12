@@ -15,7 +15,7 @@ I will be posting a full write up of [Kioptrix: 2014 (#5)](#) in the near future
 
 The full directory traversal script is [here]({{ site.url }}/assets/traversal/directorytraversal.txt)
 
-Take a look at the full script to uderstand what options can be specified at the command line. I have tried to write this in a way so that I can continue to add new features in the future. For now I will only go over the use for and apache server on a linux host.
+Take a look at the full script to understand what options can be specified at the command line. I tried to write the script in a way that I can continue to add new features in the future. Below I will go over how I used this script for the Kioptrix: 2014 vm.
 
 To run the script I will specify the url (-u) and server (-s).
 {% highlight bash %}
