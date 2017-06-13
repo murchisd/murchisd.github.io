@@ -1,0 +1,39 @@
+#!/usr/bin/python
+
+# Reddit Scrapper 
+
+# Runs as part of a daily script to get any new posts
+# for security subreddits
+
+import praw, sys, os
+from datetime import datetime, date, time, timedelta
+import gmailsendemail
+
+today = datetime.combine(date.today(), time.min)
+yesterday = today - timedelta(days=1)
+
+reddit = praw.Reddit('pybot')
+
+subreddits = "netsecstudents","netsec","securityCTF", "HowToHack"
+
+body = ""
+for sub in subreddits:
+	subreddit = reddit.subreddit(sub)
+	body += sub + "\n\n"
+	for post in subreddit.new():
+		if sub == "HowToHack" and "www.reddit.com" in post.url:
+			#Only want write ups from How To Hack, don't care about the discussions
+			continue
+		if datetime.utcfromtimestamp(post.created_utc) >= yesterday and datetime.utcfromtimestamp(post.created_utc) <= today:
+			body += "\t"+post.title.encode('utf-8') + "\n"
+			body += "\t"+post.url.encode('utf-8')+"\n\n"
+			#print datetime.utcfromtimestamp(post.created_utc)
+
+file = "./redditupdate-tmp"			
+if os.path.exists(file):
+    os.remove(file)
+	
+with open(file, 'w') as f:
+	f.write(body)
+
+gmailsendemail.main() 
