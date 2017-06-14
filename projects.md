@@ -8,7 +8,7 @@ pagetitle: pr0j3cts
 navigation_weight: 3
 ---
 
-
+![Projects]({{ site.url }}/assets/projects.png)
 ><br>This page contains posts about projects I am working on or have completed. These projects range from simple python scripts to building a home lab from scratch.<br> 
 <br>
 The posts contain a description of the project, links to source code, and a little bit about my thought process during the project.<br><br>

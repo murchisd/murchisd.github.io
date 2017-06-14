@@ -8,16 +8,19 @@ layout: default
   
   {{ content }}
 
-  <!--<ul class="post-list">
+  <ul class="post-list">
     {% for post in site.posts %}
+			{% if post.category == page.pagetitle %}
       <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-       <h2>
+        <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+					<span class="post-meta">By {{post.author}},</span>
+					<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
         </h2>
       </li>
+		{% endif %}
     {% endfor %}
-  </ul>-->
+  </ul>
 
 </div>

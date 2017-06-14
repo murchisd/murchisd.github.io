@@ -7,7 +7,7 @@ title: Write-ups
 pagetitle: wr1t3-Ups
 navigation_weight: 4
 ---
-
+![Write-Ups]({{ site.url }}/assets/writeups.png)
 ><br>Here, I will be posting write-ups of CTF challenges, or hacking exercises I have completed. <br><br>**Unitl there is an official CSUS/n00bs page, this page will also serve as a place for team members to publish their own writeups.
 <br><br>
 

@@ -7,16 +7,9 @@ title: Contact
 pagetitle: c0nt@ct
 navigation_weight: 6
 ---
-<html>
-<div class="container">
-	<br>
-
+![Contact](({{ site.url }}/assets/contact.png)
 {% highlight bash %}
 EHLO
 RCPT TO: <donaldmurchison[at]csus[dot]edu>
 {% endhighlight %}
-<br>
-<p>Currently, the best way to reach me is at my CSUS email address.</p>
 
-</div>
-</html>

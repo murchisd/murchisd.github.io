@@ -7,7 +7,7 @@ title: Contact
 pagetitle: c0nt@ct
 navigation_weight: 6
 ---
-
+![Contact]({{ site.url }}/assets/contact.png)
 {% highlight bash %}
 EHLO
 RCPT TO: <donaldmurchison[at]csus[dot]edu>
