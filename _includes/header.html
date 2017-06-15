@@ -16,7 +16,7 @@
 				{% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
         {% for my_page in navigation_pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: rgb(180,180,160)"><b>{{ my_page.title | escape }}</b></a>
+          <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: rgb(180,180,170)"><b>{{ my_page.title | escape }}</b></a>
           {% endif %}
         {% endfor %}
       </div>
