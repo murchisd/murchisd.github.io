@@ -14,7 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Donald's Site
+title: Personal Security Blog
 author: Donald Murchison
 email: donaldmurchison@csus.edu
 school: California State University, Sacramento
