@@ -1,8 +1,8 @@
-<header class="site-header" role="banner">
+<header class="site-header" role="banner" style="background-image: url('{{ site.baseurl }}/assets/test.jpeg');">
 
-  <div class="header-wrapper">
+  <div class="wrapper">
 
-   <a class="site-title" href="{{ "/" | relative_url}}">{{ site.title | escape }}</a>
+   <a class="site-title" href="{{ "/" | relative_url}}" style="color: rgb(255,255,255)">{{ site.title | escape }}</a>
     <nav class="site-nav" onclick=toggleMenu()>
       <span class="menu-icon">
         <svg viewBox="0 0 18 15" width="18px" height="15px">
@@ -16,7 +16,7 @@
 				{% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
         {% for my_page in navigation_pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
+          <a class="page-link" href="{{ my_page.url | relative_url }}" style="color: rgb(255,255,255)">{{ my_page.title | escape }}</a>
           {% endif %}
         {% endfor %}
       </div>
