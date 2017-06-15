@@ -189,13 +189,11 @@ With a quick google search, I found a great article which describes how to regis
 
 [Build a Reddit Bot Part 1](http://pythonforengineers.com/build-a-reddit-bot-part-1/)
 
-The Python Reddit API Wrapper (PRAW) documentation is [here](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html)
+I followed the instructions in the article to obtain client_id and client_secret. I also read some extra notes on the praw library.
 
-**To-Do include screenshots and steps here so reader doesn't need to navigate to link
+[Python Reddit API Wrapper (PRAW) documentation](https://praw.readthedocs.io/en/latest/getting_started/quick_start.html)
 
-
-
-My application is very simple and only reads from subreddits so I did not need to include my username and password to authenticate. I created a praw.ini file in same directory as my script and saved the fields client_id, client_secret, and useragent(PyScrape Bot 0.1).
+I created a praw.ini file in same directory as my script and saved the fields client_id, client_secret, and useragent(PyScrape Bot 0.1).
 
 {% highlight python %}
 [pybot]
@@ -268,7 +266,7 @@ Once signed in the page will ask the user to allow permissions to the applicatio
 
 The credentials will be stored so you will not need to be signed in to your google account or allow permissions next time.
 
-Once the application properly authenticates, the main method makes two function to generate a "service".
+Once the application properly authenticates, the main method makes two function calls to generate a "service".
 
 {% highlight python %} 
 
@@ -321,9 +319,4 @@ def send_message(service, user_id, message):
 
 When I get time, I will update this post with more details about what is happening after the application obtains credentials. For now the links I have provided should explain most of it. 
 
-Full source code for both scripts can be found below.
-
-[RedditScrape.py]({{ site.url }}/assets/reddit/redditscrape.txt)
-
-[GmailSendEmail.py]({{ site.url }}/assets/reddit/gmailsendemail.txt) 
 
