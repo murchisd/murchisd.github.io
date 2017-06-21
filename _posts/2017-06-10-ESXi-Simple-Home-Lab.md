@@ -19,7 +19,7 @@ I would also like to setup a small network of vulnerable machines to continue le
 * Hard Drive - Samsung 850 EVO 250GB 2.5-Inch SATA III Internal SSD
 * Coolant - Corsair Hydro Series H100i v2
 * Power Supply - EVGA 850 GQ, 80+ GOLD 850W, Semi Modular
-* Case - Fractal Design MicroATX Case with Window
+* Case - Fractal Design MicroATX Define Mini C
 
 All together it cost ~$1100. I went with a smaller amount of RAM and Hard Drive space because I can easily upgrade in the future.
 
