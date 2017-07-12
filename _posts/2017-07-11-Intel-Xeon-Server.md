@@ -2,14 +2,12 @@
 layout: post
 author: Donald Murchison
 category: pr0j3cts
-title: "ESXi Simple Home Lab (Server Build)"
+title: "Building an Intel Xeon Server"
 ---
 
-![canvas logo]({{ site.url }}/assets/esxi/esxi-logo.jpeg)
+![xeon logo]({{ site.url }}/assets/esxi/xeonlogo.jpeg)
 
-I am starting a project to build a simple home lab running ESXi. I want to be able to implement instances of systems like pfSense, Splunk, and Elastic Search as a learning project.
-
-I would also like to setup a small network of vulnerable machines to continue learning offensive security techniques. 
+I am starting a project to build a my own home server. I decided to do this so I can run ESXi and host mulitple virtual machines. After doing this I will be able to implement systems like pfSense, Splunk, and Elastic Search as learning projects.
 
 This will be my first build, so let's get started.
 
@@ -58,7 +56,7 @@ Let's get started with the build. I apologize for the poor photo quality, taking
 
 These videos were basically all I used as reference. It is very helpful to watch them a couple times before starting. 
 
-***Part 0 - Prep***
+***Part 0 - Prepping the Case***
 
 Besides research, not much preperation was required. I opened each component's package and inspected them for broken or missing parts. Nothing stood out as wrong so I moved on to prepping the case.
 
@@ -110,7 +108,7 @@ The Corsair fans have arrows pointing in the direction the fans will move air. I
 
 ![radiator in case]({{ site.url }}/assets/esxi/build/airflow.png)
 
-Now that the radiator and fans were attached to the case I needed to attach the cooling block to the CPU. This was 3 simple steps.
+Now that the radiator and fans were attached to the case I needed to attach the cooling block to the CPU. This was 5 simple steps.
 
 * Remove plastic cover on cooling block
 * Place block onto standoffs
@@ -118,6 +116,62 @@ Now that the radiator and fans were attached to the case I needed to attach the 
 
 ![cooling block]({{ site.url }}/assets/esxi/build/coolingblock.png)
 
+* Connect fan leads to cooling block and cooling block to the cpu fan header on motherboard
+* (Optional) Connect mini-USB of data cable to cooling block and USB header of data cable to a 9 pin USB 2.0 header on mother board
+
+![fan headers]({{ site.url }}/assets/esxi/build/fanheaders.png)
+
+
 Refer to the "[How to Install the Hydro Series H100i GTX Liquid Cooler](http://www.corsair.com/en-us/blog/2015/march/h100i_gtx_how_to)" page for more detailed instructions.
 
-***Part 3 - Installing SSD (Coming Soon)***
+***Part 3 - Attaching the Solid State Drive***
+
+This part was very easy. I just removed the backplate behind the motherboard, attached the SSD with the screws provided with the case, and then re-attached the backplate.
+
+![SSD backplate]({{ site.url }}/assets/esxi/build/ssdbackplate.png)
+
+The backplate has three spots for SSDs. Since I am only installing one, I decided to place it as far away from the CPU as possible. I do not think it is significant where the SSD goes.
+
+![SSD Attached]({{ site.url }}/assets/esxi/build/ssdattach.png)
+
+***Part 4 - Connecting the Power Supply Unit***
+
+Since I used a semi-modular PSU, I first needed to attach any necessary cables.
+
+![PSU parts]({{ site.url }}/assets/esxi/build/psuparts.png)
+
+The CPU cable had 3 heads to make 1 8 pin lead. Each head had notches to make it easy to properly arrange them when inserting. I had a very simple build with one SSD and no GPUs so all I needed to attach was one SATA cable.
+
+![PSU Cables]({{ site.url }}/assets/esxi/build/psucables.png)
+
+To place the PSU in the case, remove the power suppy bracket at the bottom/rear of the case, attach to it to the PSU with the screws that came with the PSU, slide the PSU inside the case (for this build, fan down) and re-attach the bracket.
+
+![PSU Bracket]({{ site.url }}/assets/esxi/build/psubracket.png)
+
+![PSU inside]({{ site.url }}/assets/esxi/build/psuin.png) 
+
+The final step is to connect all the power cables to their respective components. This is when I also attached all leads from the front panel and other components, like fans. Use the diagram provided with the motherboard to determine where the appropriate headers are. In my excitement I forgot to take document this part, I might update with more detailed notes later.
+
+![Cables connected]({{ site.url }}/assets/esxi/build/afterpsu.png)
+
+Finally, you should organize the cables. For this I used, electrical tape and zip ties but not much work was needed for such a simple build.
+
+***Part 5 - Installing the Memory***
+
+Installing memory just requires placing the RAM into the approriate slot.
+
+* Pop the plastic clips open
+* Orient the RAM to line up with the notches
+* Place the RAM in the slot and push down until the platic clips snap closed
+
+Thats it. If you are using 2 slots, make sure to place the RAM in slots with matching colors. Some CPUs can be picky about which slots it checks first for memory. If the CPU is having trouble registering the memory, try each of the slots. Also check the compatibility list. 
+
+***Part 6 - Turning it on***
+
+Plug the newly built server into an outlet, start the ignition, and enjoy your new awesome server.
+
+My next step is to get ESXi up in running, check out my other related posts.
+
+    
+
+
