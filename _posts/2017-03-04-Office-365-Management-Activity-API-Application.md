@@ -3,6 +3,7 @@ layout: post
 author: Donald Murchison
 category: pr0j3cts
 title: "Office 365 Management Activity API Application"
+description: Office 365 Exchange Online log pull library and application
 ---
 
 ![office 365 logo]({{ site.url }}/assets/office/office-365-cloud.png)
