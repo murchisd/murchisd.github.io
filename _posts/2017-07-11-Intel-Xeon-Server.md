@@ -2,7 +2,7 @@
 layout: post
 author: Donald Murchison
 category: pr0j3cts
-title: "Building an Intel Xeon Server"
+title: "Home Lab Series - Building an Intel Xeon Server"
 ---
 
 ![xeon logo]({{ site.url }}/assets/esxi/xeonlogo.jpeg)
