@@ -14,15 +14,10 @@ navigation_weight: 1
 donald@comp:~$ whoami
 {% endhighlight %}
 
-		<p>I am a recent summa cum laude graduate looking to start a career in information security. I obtained a Bachelor of Science from California State University, Sacramento, in Computer Science with a Math minor.<br><br> I am also a recipient of the CyberCorps: Scholarship for Service award, and work at the Information Security Office at Sacramento State.<br><br> While I already graduated, I will always be a student of cybersecurity. I am currently focusing my studies on network forensics and offensive security.<br><br></p>
+		<p>I am a new professional in the field of cybersecurity trying to find my niche. Currently, I work as a Digital Forensics Examiner,SIEM Administrator, and Security Intelligence Analyst.<br><br> I am pursuing a Masters degree in Cybersecurity from NYU Tandon as part of the Cyber Fellowship program. I have a Bachelor of Science from California State University, Sacramento, in Computer Science with a Math minor.<br><br> I obtained several professional certifications to boost my resume but really I just love learning about computer science and security.<br><br>I have tons of fun working on projects outside of my education and job in all areas of cybersecurity. I have spent a lot of time narrowing down the areas to specialize in, but still having trouble choosing just one.<br></p>
 {% highlight bash %}
 donald@comp:~$ info
 {% endhighlight %}
 
 		<p> {{site.description}}</p><br>
-
-{% highlight bash %}
-donald@comp:~$ useradd -G CSUS/n00bs
-{% endhighlight %}
-		<p>Recently, I have started a Capture The Flag team open to all CSUS students, CSUS/n00bs. Any CSUS students who are interested in joining the team can contact me for more information.<br><br></p>
 </div>
