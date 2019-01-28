@@ -9,7 +9,7 @@ title: "Daily Reddit Scrapper"
 
 Reddit has become one of my favorite sources of cybersecurity articles. Several subreddits have excellent write-ups and posts for those interested in security, no matter what skill level. 
 
-I thought it would be nice to automatically receive a list of new posts from my favorite subreddits, so, I spun up a python script retrieve a list of new posts and a python script to email the list to myself.  
+I thought it would be nice to automatically receive a list of new posts from my favorite subreddits, so, I spun up a python script retrieve a list of new posts and a python script to email the list to myself. The full scripts are below.  
 
 ***Redditscraper.py***([raw]({{ site.url }}/assets/reddit/redditscrape.txt))
 {% highlight python %}
