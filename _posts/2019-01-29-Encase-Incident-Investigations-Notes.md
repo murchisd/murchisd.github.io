@@ -109,7 +109,7 @@ report of incident
 ## ***Windows Registry and Autoruns***
 
 **5 Main Registry Hives**
-1. NtUser.dat (User Specific - C:\Users\<username>\ )
+1. NtUser.dat (User Specific - C:\Users\\\<username\>\ )
 - Protected Storage for User, MRU lists, User's preferences
 2. SOFTWARE ( C:\Windows\System32\config\ )
 - All installed programs on the system and their settings
@@ -141,7 +141,7 @@ report of incident
 *Manual*
 - Startup Folder (AppData\Roaming\Microsoft\Windows\StartMenu\Startup)
 - Tons of registry locations where these can be stored  
-    - Services (System\ControlSet00X\Services\<Service>\Start)
+    - Services (System\ControlSet00X\Services\\<Service\>\Start)
     - Software(Software\Microsoft\Windows\CurrentVersion\(Run|RunOnce))
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- I think any "Run" or "RunOnce" key
 
@@ -462,7 +462,7 @@ report of incident
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- CSV file
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- SQL DB
     - Easier to use SQL DB (SQLite Expert Personal - Free Tool)
-<br>&nbsp;&nbsp;&nbsp;&nbsp;- Select * from LogFile where FullPath Like '%<filename>%'
+<br>&nbsp;&nbsp;&nbsp;&nbsp;- Select * from LogFile where FullPath Like '%\<filename\>%'
     - This will give us the filename info like Processor, but with a lot more information such as reason for entry
 - The File Paths, dates and times, names of link files, can be used to investigate further
 - The Short Volume Serial Number will be in the link files
