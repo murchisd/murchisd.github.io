@@ -14,7 +14,7 @@ navigation_weight: 1
 donald@comp:~$ whoami
 {% endhighlight %}
 
-		<p>I am a new professional in the field of cybersecurity trying to find my niche. Currently, I work as a Digital Forensics Examiner,SIEM Administrator, and Security Intelligence Analyst.<br><br> I am pursuing a Masters degree in Cybersecurity from NYU Tandon as part of the Cyber Fellowship program. I have a Bachelor of Science from California State University, Sacramento, in Computer Science with a Math minor.<br><br> I obtained several professional certifications to boost my resume but really I just love learning about computer science and security.<br><br>I have tons of fun working on projects outside of my education and job in all areas of cybersecurity. I have spent a lot of time narrowing down the areas to specialize in, but still having trouble choosing just one.<br></p>
+		<p>I am a new professional in the field of cybersecurity and I am pursuing a Masters degree from NYU Tandon as part of the Cyber Fellowship program. I enjoy studying a wide variety of topics, from Penetration Testing to Digital Forensics, and have received several professional certificates to demonstrate my aptitude in these areas.<br><br>Professionally, I work as an IT Specialist with mulitple different roles including Digital Forensics Examiner, SIEM Administrator, and Cyber Intelligence Analyst. Since I am still relatively new to the industry, this has been a great opportunity to broaden my background and explore different areas in which I might want to specialize. My goal is to focus my career on specific topics and become an expert in those fields.<br><br></p>
 {% highlight bash %}
 donald@comp:~$ info
 {% endhighlight %}
