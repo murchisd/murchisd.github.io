@@ -5,7 +5,7 @@
 layout: page
 title: Resume
 pagetitle: re5Um3
-navigation_weight: 5
+navigation_weight: 6
 ---
 
 ![Resume]({{ site.url }}/assets/resume.png)

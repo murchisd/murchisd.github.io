@@ -5,7 +5,7 @@
 layout: page
 title: Contact
 pagetitle: c0nt@ct
-navigation_weight: 6
+navigation_weight: 7
 ---
 ![Contact]({{ site.url }}/assets/contact.png)
 {% highlight bash %}
