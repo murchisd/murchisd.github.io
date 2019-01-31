@@ -5,6 +5,136 @@ category: n0tes
 title: "Encase - Incident Investigation"
 ---
 
+Here are my personal notes from OpenText "IR250 - Incident Investigation" course (Nothing was copied out of the Encase copyrighted manual). I took almost all of the Encase courses and this was by far my favorite. The instructors provide excellent resources and go way beyond just teaching how to use Encase. While my notes are very shorthand, the course went in-depth on many non-Encase topics, like NTFS. If you like getting in to the technical "weeds" and parsing hex this course is for you.
+
+## ***Glossary***
+
+[Incident Response Considerations](#incident-response-considerations)
+- Legal Considerations
+- Education
+- Policies & Procedures
+- Equipment
+- Flexibility & Mindset
+
+[Examination Methodologies and Options](#examination-methodologies-and-options)
+- 4 Basic Security Principles
+- Options
+- Starting Investigation - Recommendation (3 steps)
+
+[Encase Endpoint Investigator](#encase-endpoint-investigator)
+- Network Preview
+- Sweep Enterprise
+
+[Windows Registry and Autoruns](#windows-registry-and-autoruns)
+- 5 Main Registry Hives
+- Time Zone Information
+- Autoruns
+
+[NTFS Metadata Files & $MFT Overview](#ntfs-metadata-files--mft-overview)
+- Volume Boot Record
+- Metadata Overview
+
+[$MFT Record Header Details](#mft-record-header-details)
+- Record Header
+- $MFT Attributes
+
+[Standard Information and Filename Attribute Details](#standard-information-and-filename-attribute-details)
+- Standard Information Attribute
+- Filename Attribute
+
+[Data Attribute Details](#data-attribute-details)
+- Data Attribute
+- Non-Resident Data
+- Resident Data
+- Alternate Data Streams (ADS)
+
+[USN Change Journal Details](#usn-change-journal-details)
+- Implementation
+- Record Content
+- Procedure
+
+[$LogFile Details](#logfile-details)
+- Implementation
+- Procedure
+
+[EFS and Bitlocker VHDs](#efs-and-bitlocker-vhds)
+- NTFS Encrypting File System (EFS)
+- VHDs Encrypted with Bitlocker
+
+[Windows Event Logs](#windows-event-logs)
+- Old Version (EVT)
+- Current Version (EVTX)
+- Procedure
+
+[Prefetch](#prefetch)
+- PFDump (Enscript)
+- Bookmark Filter Plugin
+
+[Link Files and Jumplists](#link-files-and-jumplists)
+- Jumplists
+- Importance of Link Files and Jumplists
+- Important Components of Link Files
+- Distributed Link Tracking Service
+- Recent User File System Activity
+- Jumplist Locations
+- Encase Processor
+- Enscript
+- Using (Own) Object ID to find Target File
+- Using Conditions to find Files with (Own) Object ID
+- $R\<6 chars\>.\<original extension\> and $I\<6 chars\>.\<original extension\>
+- Matching Username to SID
+- Parsing $I files
+- Missing $I file
+
+[ShellBags](#shellbags)
+- USRClass.dat
+- Encase Processor
+- Enscript
+
+[Volume Shadow Service](#volume-shadow-service)
+- Volume Shadow Copy
+- Recovery Methods
+
+[Memory Analysis](#memory-analysis)
+- RAM Usage
+- Volatility
+- Common Analysis
+
+[Browser Artifacts](#browser-artifacts)
+- Configuration
+- Browsing History
+- Bookmarks
+- Cache Content
+- Cookies
+- Web Server Data
+- Local Storage
+- Form Data and Web Passwords
+
+[Internet Explorer and Edge](#internet-explorer-and-edge)
+- Bookmarks
+- Cache
+- History
+- WebCacheV01.dat
+- Getting Accurate Access Count
+- Recovering Deleted History from IE
+- Microsoft Edge (Barely went over)
+
+[Mozilla FireFox](#mozilla-firefox)
+- FireFox User Profiles
+- Base Artifact Location
+- Pref.js
+- Encase Processor
+- Consequences of SQLite Write -Ahead-Logging (WAL)
+- Handling WAL
+- Secure Wipe
+
+[Google Chrome](#google-chrome)
+- Chrome User Profiles
+- Base Artifact Location
+- Preferences
+- Encase Processor
+      
+
 ### ***Incident Response Considerations***
 **Legal Considerations**
 - BYOD
@@ -106,7 +236,7 @@ report of incident
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- This will take much longer, and retrieves file contents (Might want to do this as secondary)
 - This can affect current state of computer, need to be aware of what it is doing. Need to get this question answered somehow
 
-## ***Windows Registry and Autoruns***
+### ***Windows Registry and Autoruns***
 
 **5 Main Registry Hives**
 1. NtUser.dat (User Specific - C:\Users\\\<username\>\ )
@@ -153,7 +283,7 @@ report of incident
 *Enscripts*
 - Windows Autostart Programs Result
 
-## ***NTFS Metadata Files & $MFT Overview***
+### ***NTFS Metadata Files & $MFT Overview***
 
 **Volume Boot Record**<br>
 ![(Missing) NTFS Boot Sector Diagram]({{ site.url }}/assets/notes/ii/ntfs_boot.png)
@@ -165,7 +295,7 @@ report of incident
 - Location of $MFT
 - Location of $MFTMirr
 
-*Metadata Overview*
+**Metadata Overview**
 - $MFT
     - Similar to relation DB
     - Records are 1024 bytes
@@ -228,7 +358,7 @@ report of incident
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- Change log journaling ($UsnJrnl)
     - File identifier = 11
 
-## ***$MFT Record Header Details***
+### ***$MFT Record Header Details***
 ![(Missing) File Record Segment Header Diagram]({{ site.url }}/assets/notes/ii/record_header.png)
 
 **Record Header**
@@ -290,7 +420,7 @@ report of incident
 
 ![(Missing) Non-Resident Attribute Header]({{ site.url }}/assets/notes/ii/nonres_header.png)
 
-## ***Standard Information and Filename Attribute Details***
+### ***Standard Information and Filename Attribute Details***
 
 **Standard Information Attribute**
 - De Facto location for storage of file system timestamps and DOS attributes
@@ -345,7 +475,7 @@ report of incident
 
 ![(Missing) Name Types]({{ site.url }}/assets/notes/ii/name_types.png)
 
-## ***Data Attribute Details***
+### ***Data Attribute Details***
 
 **Data Attribute**
 - If a file has any data it will have a Data Attribute
@@ -353,14 +483,14 @@ report of incident
 - Primary Streams are unnamed - ADS will have a name
 - Both can be resident or non-resident
 
-*Non-Resident Data*
+**Non-Resident Data**
 
 ![(Missing) $Data and data runlists]({{ site.url }}/assets/notes/ii/data_diagram.png)
 
 - Data run list will follow the above format and end with 0x00 when no more fragments
 - The Run offset uses signed integer
 
-*Resident Data*
+**Resident Data**
 
 - This uses the same Resident Attribute Header has before (24 bytes)
 
@@ -386,14 +516,14 @@ report of incident
     - If isStream has value AND if NOT (Name find \<Default Windows Streams\>)
 - This will find a lot of user defined streams
 
-## ***USN Change Journal Details***
+### ***USN Change Journal Details***
 
 - Update Sequence Number Change Journal
     - This is the same update sequence number in $SIA
 - When any change is made to file or directory, Journal is updated with description of change and file affected
 - This can be helpful in proving a user knew about the file, and discovering original file names to search for other evidence like link files
 
-*Implementation*
+**Implementation**
 - Located in the $Extend folder
 - Has 2 alternate data streams
     - $J
@@ -401,7 +531,7 @@ report of incident
     - $Max
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- Contains information about the current state/configuration of journal
 
-*Record Content*
+**Record Content**
 - Version
 - Target $MFT file reference
 - Parent $MFT file reference
@@ -413,7 +543,7 @@ report of incident
 - Target file attributes
 - Target Filename
 
-*Procedure*
+**Procedure**
 - Find the File ID and Sequence Number for file of interest
     - Changes to names to not change the sequence number
 - Select $USNJrnl-$J
@@ -425,7 +555,7 @@ report of incident
     - This will bookmark and export the results (Much easier to read CSV in excel)
 - We can now see reasons for entries, but more importantly a history of the file and folder names
 
-## ***$LogFile Details***
+### ***$LogFile Details***
 
 - Revolving transaction log for $MFT (Allows for recoverability)
 - As metadata changes, both original data and changes written to $LogFile
@@ -433,7 +563,7 @@ report of incident
     - Once the $LogFile is full the system will force all writes to $MFT
     -$LogFile is continuously overwritten
 
-*Implementation*
+**Implementation**
 - Default Size - 65536 bytes
 - Separated into 4096 byte pages
 - Two Main Types of Areas
@@ -445,7 +575,7 @@ report of incident
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- First 2 records will be "buffer page areas" (1 is backup)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- Records written to "buffer page area", then moved to "normal page area" when full
 
-*Procedure*
+**Procedure**
 - Encase Processor
     - Can use the Windows Artifact Parser option
     - This falls under the $MFT transfers category
@@ -467,7 +597,7 @@ report of incident
 - The File Paths, dates and times, names of link files, can be used to investigate further
 - The Short Volume Serial Number will be in the link files
 
-## ***EFS and Bitlocker VHDs***
+### ***EFS and Bitlocker VHDs***
 
 **NTFS Encrypting File System (EFS)**
 - EFS makes use of $EFS ADS to store one or more decryption keys
@@ -501,7 +631,7 @@ encrypted data if they forgot password
     - Collect from AD
     - Use Passware to dump the key from a copy of RAM
 
-## ***Windows Event Logs***
+### ***Windows Event Logs***
 
 - Windows event logs can be very important to an investigation
 
@@ -531,7 +661,7 @@ Logs)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- Need whitespace included in logs (tabs)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- Select Events and bookmark them (Report is much easier to read)
 
-## ***Prefetch***
+### ***Prefetch***
 
 - \<Volume Letter\>:\Windows\Prefetch
 - *.PF files
@@ -561,7 +691,7 @@ Logs)
 <br>&nbsp;&nbsp;&nbsp;&nbsp;- Comment find <files of interest>
 - This can be incredibly useful for more than just prefetch, any bookmarks can be filtered
 
-## ***Link Files and Jumplists***
+### ***Link Files and Jumplists***
 
 **Jumplists**
 - Collection of link files that appear when an applications button is right clicked in the task bar
@@ -674,7 +804,7 @@ chars
 - A file might be emptied from Recycle bin and recovered by Encase
 - If the $I file is missing, we can try to search the UsnJrnl for $MFT record number and $MFT Seq Num minus 1 to find path and file name
 
-## ***ShellBags***
+### ***ShellBags***
 - Set of registry keys to maintain size, view, icon, and position of a folder when using Explorer
 - Can persist for Directories even after it has been removed
 - Help with the presence and tracking of folder
@@ -717,7 +847,7 @@ Desktop
 - Allows ability to only look at specific users shell bags
 - Since bookmarks everything, can use bookmark filter plugin to search for TargetMFTNum and TargetMFT SeqNum
 
-## ***Volume Shadow Service***
+### ***Volume Shadow Service***
 - Framework that allows NTFS volumes to be backed up without being taken offline
 - This allows users to recover previous versions of files that were backed up when a system restore point was created or a backup made by Windows Backup Application
 
@@ -758,7 +888,7 @@ Desktop
 <br>&nbsp;&nbsp;&nbsp;&nbsp;-  Can set target conditions and add Hash for files to filter results
     - Files will show up in Evidence now
 
-## ***Memory Analysis***
+### ***Memory Analysis***
 
 **RAM Usage**
 - CPUs process input data and produce output data but cannot access disks directly, they can only
@@ -807,7 +937,7 @@ KDGB and KdCopyDataBlock
 - Process injection
 - Open Files
 
-## ***Browser Artifacts***
+### ***Browser Artifacts***
 
 - These are categories of browser artifacts that should generally apply to all browsers
 
@@ -848,7 +978,7 @@ KDGB and KdCopyDataBlock
 - Things entered into a web form may be saved by browser
 - Often encrypted, but might be recoverable
 
-## ***Internet Explorer and Edge***
+### ***Internet Explorer and Edge***
 
 - Much of these artifacts are not just for IE but Windows Explorer as well
 - Processor -> Find Internet Artifacts
@@ -898,7 +1028,7 @@ KDGB and KdCopyDataBlock
     - ESE database format
     - Need to export and view with 3rd party tool
 
-## ***Mozilla FireFox***
+### ***Mozilla FireFox***
 
 **FireFox User Profiles**
 - Firefox provides a feature to run the browser using different profiles.
@@ -947,7 +1077,7 @@ KDGB and KdCopyDataBlock
 **Secure Wipe**
 - Firefox uses secure wipe deletion in its implementation of SQLite
 
-## ***Google Chrome***
+### ***Google Chrome***
 
 **Chrome User Profiles**
 - Chrome provides a feature to run the browser using different profiles.
